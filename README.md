@@ -12,7 +12,7 @@ Começando a programar, disposto a aprender tudo que eu tiver a oportunidade.
 
 ## Projetos
 
-[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=LopesVini&repo=vini_llcprojetodev.github.io)](https://github.com/anuraghazra/github-readme-stats)
+[![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=LopesVini&repo=Desafio-Extra-NLW-eSports)](https://github.com/anuraghazra/github-readme-stats)
 
 
 
