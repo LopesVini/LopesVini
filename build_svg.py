@@ -15,7 +15,7 @@ ASCII_ROWS = 25
 ASCII_CHARACTERS = "@%#*+=-:,."
 
 HIGHLIGHT_CUTOFF = 145
-PORTRAIT_ZOOM = 1.20
+PORTRAIT_ZOOM = 1.0
 
 CONTRAST = 1.35
 SHARPNESS = 1.65
@@ -81,7 +81,7 @@ def prepare_image(image_path: Path) -> Image.Image:
     original = Image.open(image_path)
     flattened = flatten_and_crop(original)
     zoomed = apply_zoom(flattened, PORTRAIT_ZOOM)
-    fitted = ImageOps.fit(zoomed, (ASCII_COLUMNS, ASCII_ROWS), method=Image.Resampling.LANCZOS, centering=(0.5, 0.40))
+    fitted = ImageOps.pad(zoomed, (ASCII_COLUMNS, ASCII_ROWS), method=Image.Resampling.LANCZOS, color=(255, 255, 255))
     grayscale = fitted.convert("L")
     grayscale = ImageOps.autocontrast(grayscale, cutoff=1)
     grayscale = ImageEnhance.Contrast(grayscale).enhance(CONTRAST)
