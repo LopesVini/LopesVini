@@ -1,49 +1,581 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="520" viewBox="0 0 1100 520">
-  <style>
-    .bg { fill: #0d1117; }
-    .border { fill: none; stroke: #30363d; stroke-width: 2; }
-    .title { fill: #f0f6fc; font: 700 26px monospace; }
-    .text { fill: #c9d1d9; font: 20px monospace; }
-    .label { fill: #ff7b72; font: 700 20px monospace; }
-    .value { fill: #79c0ff; font: 20px monospace; }
-    .muted { fill: #8b949e; font: 20px monospace; }
-  </style>
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1600"
+    height="900"
+    viewBox="0 0 1600 900"
+>
+    <style>
+        .card {
+            fill: #161b22;
+        }
 
-  <rect class="bg" width="1100" height="520" rx="18"/>
-  <rect class="border" x="20" y="20" width="1060" height="480" rx="12"/>
+        .ascii {
+            fill: #d0d7de;
+            font-family:
+                "Courier New",
+                "Liberation Mono",
+                monospace;
+            font-size: 11.48px;
+            font-weight: 700;
+            white-space: pre;
+            letter-spacing: 0;
+        }
 
-  <text class="title" x="55" y="70">vinicius@vivico</text>
-  <text class="muted" x="55" y="105">──────────────────────────────────────────────────────────────</text>
+        .title,
+        .label,
+        .value,
+        .section {
+            font-family:
+                "Courier New",
+                "Liberation Mono",
+                monospace;
+            font-weight: 700;
+        }
 
-  <text class="label" x="55" y="155">OS</text>
-  <text class="muted" x="190" y="155">.............</text>
-  <text class="value" x="390" y="155">macOS, Linux Mint</text>
+        .title {
+            fill: #d0d7de;
+            font-size: 25px;
+        }
 
-  <text class="label" x="55" y="195">Editor</text>
-  <text class="muted" x="190" y="195">.........</text>
-  <text class="value" x="390" y="195">VS Code, Obsidian</text>
+        .label {
+            fill: #ffa657;
+            font-size: 19px;
+        }
 
-  <text class="label" x="55" y="235">Learning</text>
-  <text class="muted" x="190" y="235">.......</text>
-  <text class="value" x="390" y="235">Linux, Networks, TypeScript, Python</text>
+        .value {
+            fill: #a5d6ff;
+            font-size: 19px;
+        }
 
-  <text class="label" x="55" y="275">University</text>
-  <text class="muted" x="190" y="275">......</text>
-  <text class="value" x="390" y="275">Electrical Engineering @ UFMG</text>
+        .bullet {
+            fill: #6e7681;
+            font-family: monospace;
+            font-size: 20px;
+            font-weight: 700;
+        }
 
-  <text class="label" x="55" y="315">Project</text>
-  <text class="muted" x="190" y="315">.........</text>
-  <text class="value" x="390" y="315">vivico.space</text>
+        .section {
+            fill: #d0d7de;
+            font-size: 20px;
+        }
 
-  <text class="label" x="55" y="375">Interests</text>
-  <text class="muted" x="190" y="375">.......</text>
-  <text class="value" x="390" y="375">Automation, Homelab, AI, Engineering</text>
+        .leader {
+            stroke: #6e7681;
+            stroke-width: 4;
+            stroke-linecap: round;
+            stroke-dasharray: 1 12;
+        }
 
-  <text class="label" x="55" y="415">Music</text>
-  <text class="muted" x="190" y="415">..........</text>
-  <text class="value" x="390" y="415">Pink Floyd, Tool, Rush</text>
+        .header-line,
+        .section-line {
+            stroke: #d0d7de;
+            stroke-width: 2;
+        }
+    </style>
 
-  <text class="label" x="55" y="455">GitHub</text>
-  <text class="muted" x="190" y="455">.........</text>
-  <text class="value" x="390" y="455">github.com/LopesVini</text>
+    <rect
+        class="card"
+        width="1600"
+        height="900"
+        rx="28"
+    />
+
+    <text x="24.00" y="101.61" class="ascii" xml:space="preserve">---------------------------=*==+=+==+=****%@@@@@@@%#%---------------------------------</text>
+<text x="24.00" y="112.85" class="ascii" xml:space="preserve">-                        ,-@**@%%@@@@@@@#@@@@@@@@@@%@--.                             -</text>
+<text x="24.00" y="124.10" class="ascii" xml:space="preserve">-                        ,-@#@@%*@@@@@%@@@@@@@@@@@@@@@--                             -</text>
+<text x="24.00" y="135.34" class="ascii" xml:space="preserve">-                        --=*%@%%@@@@@%@@@@@@@@@@@@@@@@---                           -</text>
+<text x="24.00" y="146.59" class="ascii" xml:space="preserve">-                      :--#%%%%@@@@@@%@@@@@@@@@@@@@@@@@%%=-                          -</text>
+<text x="24.00" y="157.84" class="ascii" xml:space="preserve">-                     --%*@@@#@@@@@@@@@@@@@@@@@@@@%@@@@@@@-,                         -</text>
+<text x="24.00" y="169.08" class="ascii" xml:space="preserve">-                     -@@#@@@@@#@@@@@@@@@@@@@@@@@@%@@@@@@@+-                         -</text>
+<text x="24.00" y="180.33" class="ascii" xml:space="preserve">-                    -=@#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-                         -</text>
+<text x="24.00" y="191.57" class="ascii" xml:space="preserve">-                    -@@%@@%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@-.                        -</text>
+<text x="24.00" y="202.82" class="ascii" xml:space="preserve">-                   ,-@@%%@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@=-                        -</text>
+<text x="24.00" y="214.07" class="ascii" xml:space="preserve">-                   -+@@%*@@%@@@%@%%%@@@@@@@@@@@@@@@@@@@@@@@-                        -</text>
+<text x="24.00" y="225.31" class="ascii" xml:space="preserve">-                   -%@@%%@@%@@%*#%##@@@@@%#@@@@@@@@@@@@@@@@--                       -</text>
+<text x="24.00" y="236.56" class="ascii" xml:space="preserve">-                   -@@%@@@@@@@#+*##*#@%%@%%%@@@@@@@@@@@@@@@@:.                      -</text>
+<text x="24.00" y="247.80" class="ascii" xml:space="preserve">-                  :-@@@@@@%@@@#++%%#*####%%%@@@@@@@@@@@@@@@@-.                      -</text>
+<text x="24.00" y="259.05" class="ascii" xml:space="preserve">-                  -*@@@@@@@*-@@*+*@#@#***###@@@@@@@@@@@@@@@@:.                      -</text>
+<text x="24.00" y="270.30" class="ascii" xml:space="preserve">-                  -%@@@@@@#+=*@*+*@*#**%#**##@@@@@@@@@@@@@@@-                       -</text>
+<text x="24.00" y="281.54" class="ascii" xml:space="preserve">-                  -%@*#@@@===***+#@***+++***#@@@%%@@@@@@@@@+-                       -</text>
+<text x="24.00" y="292.79" class="ascii" xml:space="preserve">-                  :=@%@@@*=-==+*@@@+++====++*@@@@%%%%@@@@@@+-                       -</text>
+<text x="24.00" y="304.03" class="ascii" xml:space="preserve">-                  ,:@@@@#=--==*+%*=====-====+*#%@@%##%%@@@@+-                       -</text>
+<text x="24.00" y="315.28" class="ascii" xml:space="preserve">-                   -@@@@*+=:=-==-=:---=======+*#@%##%%%@@@@+-                       -</text>
+<text x="24.00" y="326.52" class="ascii" xml:space="preserve">-                   -@@@@*=::::::,:::-=======++++#%%#%%%@@@@+:                       -</text>
+<text x="24.00" y="337.77" class="ascii" xml:space="preserve">-                   :=@@@*-::--------====++=+++==+*#**%%@@@@=,                       -</text>
+<text x="24.00" y="349.02" class="ascii" xml:space="preserve">-                   ,:@@@=:--+%@@@@@**++++++***@@@@@@#*%%@@@-                        -</text>
+<text x="24.00" y="360.26" class="ascii" xml:space="preserve">-                    -@@*-::#@@@@@@@@@%++++#%@@@@@@@@@%#%@@@-                        -</text>
+<text x="24.00" y="371.51" class="ascii" xml:space="preserve">-                    -@@=--+@@@#*#%%%%#+++*%%@@@@%@@@@@%#@@--                        -</text>
+<text x="24.00" y="382.75" class="ascii" xml:space="preserve">-                    -#@--=@#+**%@@%*#*+=+*####%@@#*+#@@#@@-                         -</text>
+<text x="24.00" y="394.00" class="ascii" xml:space="preserve">-                    --@---**#@@@@@@@#%+==*%%%@@@@@@@*#%#@@-                         -</text>
+<text x="24.00" y="405.25" class="ascii" xml:space="preserve">-                   :-+@-:-+%@@+@@@%@@@+-=%@@@@@@@@@@@###@%---                       -</text>
+<text x="24.00" y="416.49" class="ascii" xml:space="preserve">-                   -#+--,-*@@@+#@%@@@*=-=#@@@@%@@%#@@###%@@@-                       -</text>
+<text x="24.00" y="427.74" class="ascii" xml:space="preserve">-                   =@@--:-=+=+#*##%%+=--+#%%%%%#%@@@@#**#%@@-                       -</text>
+<text x="24.00" y="438.98" class="ascii" xml:space="preserve">-                   -@@=----===+%%%%*=---+%%###%%%##%#***##@@-                       -</text>
+<text x="24.00" y="450.23" class="ascii" xml:space="preserve">-                   -@#---::::==++**==::-=%%##*#**###****##@+-                       -</text>
+<text x="24.00" y="461.48" class="ascii" xml:space="preserve">-                   -+@*-:-:::--=+===:::-=#@##****+**+++*##@=:                       -</text>
+<text x="24.00" y="472.72" class="ascii" xml:space="preserve">-                   ,-#%-::::--=++--:::::=+%%#***++++++**%@@-                        -</text>
+<text x="24.00" y="483.97" class="ascii" xml:space="preserve">-                    -=%+:----===--:-::---+%%#***+++++**#@@@-                        -</text>
+<text x="24.00" y="495.21" class="ascii" xml:space="preserve">-                    :-*=----===------:-:==*%%#**+++++**#%@+-                        -</text>
+<text x="24.00" y="506.46" class="ascii" xml:space="preserve">-                    .-------==-=-==+-:---+##%#**++++***#%@=:                        -</text>
+<text x="24.00" y="517.70" class="ascii" xml:space="preserve">-                     -:=---====--=*=--:-+**#%#**++++***%@@-.                        -</text>
+<text x="24.00" y="528.95" class="ascii" xml:space="preserve">-                     :=+=--+++====*-=+++**####**++****#%@@-                         -</text>
+<text x="24.00" y="540.20" class="ascii" xml:space="preserve">-                     ,:@+===+%==-+++@@**#*@@******#***#@@--                         -</text>
+<text x="24.00" y="551.44" class="ascii" xml:space="preserve">-                      :-#=-=**=-==-=@@%*#%@@@#*+**#*##%@--                          -</text>
+<text x="24.00" y="562.69" class="ascii" xml:space="preserve">-                       -*+==+===-::--+#*#@@@@#*+****##@@-                           -</text>
+<text x="24.00" y="573.93" class="ascii" xml:space="preserve">-                       -++====---=---#@@%@@@@#******##@+-                           -</text>
+<text x="24.00" y="585.18" class="ascii" xml:space="preserve">-                       :-++==+=-===+@@@@@@@@@@@#****#%@-.                           -</text>
+<text x="24.00" y="596.43" class="ascii" xml:space="preserve">-                       .:#+==--+%@@@@@@@@*@@@@@@@***#@@-                            -</text>
+<text x="24.00" y="607.67" class="ascii" xml:space="preserve">-                        -#++--=@@@@@*@%==-%@@@@@@#*#%@#-                            -</text>
+<text x="24.00" y="618.92" class="ascii" xml:space="preserve">-                        :-#++-=@@@%+**###@###*@@@##@@@-:                            -</text>
+<text x="24.00" y="630.16" class="ascii" xml:space="preserve">-                        ,:%*+==+#@@@@@@@@@@@@@@#@##%@@-                             -</text>
+<text x="24.00" y="641.41" class="ascii" xml:space="preserve">-                         :=%++++*#@@**#@@%%@@@@###%@@--                             -</text>
+<text x="24.00" y="652.66" class="ascii" xml:space="preserve">-                         ,:##*+++=-=+***++#%##*###%@#-                              -</text>
+<text x="24.00" y="663.90" class="ascii" xml:space="preserve">-                          :-@*+++==+**#***###**##%@@-:                              -</text>
+<text x="24.00" y="675.15" class="ascii" xml:space="preserve">-                           -%#**+****#%@@%%%####%@@*-                               -</text>
+<text x="24.00" y="686.39" class="ascii" xml:space="preserve">-                           -%@@**#%%%%@@@@%####%@@@-:                               -</text>
+<text x="24.00" y="697.64" class="ascii" xml:space="preserve">-                           -%@@#*#**###@@%##%%%@@@@-                                -</text>
+<text x="24.00" y="708.89" class="ascii" xml:space="preserve">-                           -#@@@***+++*%@%%##%@@@@@-:                               -</text>
+<text x="24.00" y="720.13" class="ascii" xml:space="preserve">-                           -+@@@@#*+==*#%###%@@@@@@*-----                           -</text>
+<text x="24.00" y="731.38" class="ascii" xml:space="preserve">-                           :+@@@@@%%#*%@%%@@@@@@@@@@-=@@-,                          -</text>
+<text x="24.00" y="742.62" class="ascii" xml:space="preserve">-                          ,:=*@@@@@@@%@@@@@@@@@@@%@@#@@@+-,                         -</text>
+<text x="24.00" y="753.87" class="ascii" xml:space="preserve">-                         .:-==%@@@@@@@@@@@@@@@@@@%%@@+#%@+-.                        -</text>
+<text x="24.00" y="765.11" class="ascii" xml:space="preserve">-                       . :-=-=+#@@@@@@@@@@@@@@@@%%@@@@%+*@=:                        -</text>
+<text x="24.00" y="776.36" class="ascii" xml:space="preserve">-                       ,.-=--=++*@@@@@@@@@@@@@@%%%@@@@%**%=-,. .                    -</text>
+<text x="24.00" y="787.61" class="ascii" xml:space="preserve">-                   ., ,:--*+-=+=+*#@@@@@@@@@@%%%%@@@@@#**@+=::,..  ,.               -</text>
+<text x="24.00" y="798.85" class="ascii" xml:space="preserve">-               .. ,::,,-@-%===+=+**#%@@@@@%%%%%%@@@@@@**#%=-+--:,,,,:.,,,           -</text>
+<text x="24.00" y="810.10" class="ascii" xml:space="preserve">----------------==--+=---#-%=+**++*******####%%%%@@@@@%++**=++======---===------------</text>
+
+    <text
+        x="650"
+        y="54"
+        class="title"
+    >vinicius@vivico</text>
+
+    <line
+        x1="885"
+        y1="46"
+        x2="1550"
+        y2="46"
+        class="header-line"
+    />
+
+    
+    <text
+        x="650"
+        y="106"
+        class="bullet"
+    >•</text>
+
+    <text
+        x="685"
+        y="106"
+        class="label"
+    >OS:</text>
+
+    <line
+        x1="975"
+        y1="99"
+        x2="1088"
+        y2="99"
+        class="leader"
+    />
+
+    <text
+        x="1118"
+        y="106"
+        class="value"
+    >macOS · Linux Mint</text>
+    
+    
+    <text
+        x="650"
+        y="145"
+        class="bullet"
+    >•</text>
+
+    <text
+        x="685"
+        y="145"
+        class="label"
+    >Host:</text>
+
+    <line
+        x1="975"
+        y1="138"
+        x2="1088"
+        y2="138"
+        class="leader"
+    />
+
+    <text
+        x="1118"
+        y="145"
+        class="value"
+    >MacBook Air M4</text>
+    
+    
+    <text
+        x="650"
+        y="184"
+        class="bullet"
+    >•</text>
+
+    <text
+        x="685"
+        y="184"
+        class="label"
+    >University:</text>
+
+    <line
+        x1="975"
+        y1="177"
+        x2="1088"
+        y2="177"
+        class="leader"
+    />
+
+    <text
+        x="1118"
+        y="184"
+        class="value"
+    >Electrical Engineering · UFMG</text>
+    
+    
+    <text
+        x="650"
+        y="223"
+        class="bullet"
+    >•</text>
+
+    <text
+        x="685"
+        y="223"
+        class="label"
+    >Editor:</text>
+
+    <line
+        x1="975"
+        y1="216"
+        x2="1088"
+        y2="216"
+        class="leader"
+    />
+
+    <text
+        x="1118"
+        y="223"
+        class="value"
+    >VS Code · Obsidian</text>
+    
+
+    
+    <text
+        x="650"
+        y="285"
+        class="section"
+    >— Learning</text>
+
+    <line
+        x1="850"
+        y1="277"
+        x2="1550"
+        y2="277"
+        class="section-line"
+    />
+    
+
+    
+    <text
+        x="650"
+        y="330"
+        class="bullet"
+    >•</text>
+
+    <text
+        x="685"
+        y="330"
+        class="label"
+    >Programming:</text>
+
+    <line
+        x1="975"
+        y1="323"
+        x2="1088"
+        y2="323"
+        class="leader"
+    />
+
+    <text
+        x="1118"
+        y="330"
+        class="value"
+    >Python · TypeScript</text>
+    
+    
+    <text
+        x="650"
+        y="370"
+        class="bullet"
+    >•</text>
+
+    <text
+        x="685"
+        y="370"
+        class="label"
+    >Systems:</text>
+
+    <line
+        x1="975"
+        y1="363"
+        x2="1088"
+        y2="363"
+        class="leader"
+    />
+
+    <text
+        x="1118"
+        y="370"
+        class="value"
+    >Linux · Networks · Git</text>
+    
+    
+    <text
+        x="650"
+        y="410"
+        class="bullet"
+    >•</text>
+
+    <text
+        x="685"
+        y="410"
+        class="label"
+    >Engineering:</text>
+
+    <line
+        x1="975"
+        y1="403"
+        x2="1088"
+        y2="403"
+        class="leader"
+    />
+
+    <text
+        x="1118"
+        y="410"
+        class="value"
+    >Automation · Electronics · AI</text>
+    
+
+    
+    <text
+        x="650"
+        y="475"
+        class="section"
+    >— Projects</text>
+
+    <line
+        x1="840"
+        y1="467"
+        x2="1550"
+        y2="467"
+        class="section-line"
+    />
+    
+
+    
+    <text
+        x="650"
+        y="520"
+        class="bullet"
+    >•</text>
+
+    <text
+        x="685"
+        y="520"
+        class="label"
+    >Website:</text>
+
+    <line
+        x1="975"
+        y1="513"
+        x2="1088"
+        y2="513"
+        class="leader"
+    />
+
+    <text
+        x="1118"
+        y="520"
+        class="value"
+    >vivico.space</text>
+    
+    
+    <text
+        x="650"
+        y="560"
+        class="bullet"
+    >•</text>
+
+    <text
+        x="685"
+        y="560"
+        class="label"
+    >Company:</text>
+
+    <line
+        x1="975"
+        y1="553"
+        x2="1088"
+        y2="553"
+        class="leader"
+    />
+
+    <text
+        x="1118"
+        y="560"
+        class="value"
+    >VEBRAM</text>
+    
+    
+    <text
+        x="650"
+        y="600"
+        class="bullet"
+    >•</text>
+
+    <text
+        x="685"
+        y="600"
+        class="label"
+    >Study Engine:</text>
+
+    <line
+        x1="975"
+        y1="593"
+        x2="1088"
+        y2="593"
+        class="leader"
+    />
+
+    <text
+        x="1118"
+        y="600"
+        class="value"
+    >Engineering Codex</text>
+    
+
+    
+    <text
+        x="650"
+        y="665"
+        class="section"
+    >— Contact</text>
+
+    <line
+        x1="825"
+        y1="657"
+        x2="1550"
+        y2="657"
+        class="section-line"
+    />
+    
+
+    
+    <text
+        x="650"
+        y="710"
+        class="bullet"
+    >•</text>
+
+    <text
+        x="685"
+        y="710"
+        class="label"
+    >GitHub:</text>
+
+    <line
+        x1="975"
+        y1="703"
+        x2="1088"
+        y2="703"
+        class="leader"
+    />
+
+    <text
+        x="1118"
+        y="710"
+        class="value"
+    >github.com/LopesVini</text>
+    
+    
+    <text
+        x="650"
+        y="750"
+        class="bullet"
+    >•</text>
+
+    <text
+        x="685"
+        y="750"
+        class="label"
+    >Website:</text>
+
+    <line
+        x1="975"
+        y1="743"
+        x2="1088"
+        y2="743"
+        class="leader"
+    />
+
+    <text
+        x="1118"
+        y="750"
+        class="value"
+    >vivico.space</text>
+    
+
+    
+    <text
+        x="650"
+        y="815"
+        class="section"
+    >— Interests</text>
+
+    <line
+        x1="850"
+        y1="807"
+        x2="1550"
+        y2="807"
+        class="section-line"
+    />
+    
+
+    
+    <text
+        x="650"
+        y="860"
+        class="bullet"
+    >•</text>
+
+    <text
+        x="685"
+        y="860"
+        class="label"
+    >Focus:</text>
+
+    <line
+        x1="975"
+        y1="853"
+        x2="1088"
+        y2="853"
+        class="leader"
+    />
+
+    <text
+        x="1118"
+        y="860"
+        class="value"
+    >Homelab · Music · Engineering</text>
+    
 </svg>
