@@ -15,7 +15,7 @@
 │  Interests ........ Automation, Homelab, AI, Engineering     │
 │  Music ............ Pink Floyd, Tool, Rush                   │
 │                                                              │
-│  GitHub ........... github.com/SEU-USUARIO                    │
+│  GitHub ........... github.com/SEU-USUARIO                   │
 │  Website .......... vivico.space                             │
 │                                                              │
 └──────────────────────────────────────────────────────────────┘
