@@ -53,7 +53,7 @@ text, tspan {
 <tspan x="550" y="110"><tspan class="cc">. </tspan><tspan class="key"></tspan><tspan class="key">OS</tspan>:<tspan class="cc"> ............................................ </tspan><tspan x="1100" text-anchor="end" class="value">macOS, Linux</tspan></tspan>
 <tspan x="550" y="130"><tspan class="cc">. </tspan><tspan class="key"></tspan><tspan class="key">Location</tspan>:<tspan class="cc"> ............................ </tspan><tspan x="1100" text-anchor="end" class="value">Belo Horizonte, Brazil</tspan></tspan>
 <tspan x="550" y="150"><tspan class="cc">. </tspan><tspan class="key"></tspan><tspan class="key">University</tspan>:<tspan class="cc"> .................... </tspan><tspan x="1100" text-anchor="end" class="value">Electrical Engineering, UFMG</tspan></tspan>
-<tspan x="550" y="170"><tspan class="cc">. </tspan><tspan class="key"></tspan><tspan class="key">Languages</tspan>:<tspan class="cc"> .................... </tspan><tspan x="1100" text-anchor="end" class="value">Portuguese, English</tspan></tspan>
+<tspan x="550" y="170"><tspan class="cc">. </tspan><tspan class="key"></tspan><tspan class="key">Languages</tspan>:<tspan class="cc"> ......................... </tspan><tspan x="1100" text-anchor="end" class="value">Portuguese, English</tspan></tspan>
 <tspan x="550" y="190" class="cc">. </tspan>
 <tspan x="550" y="210" class="key">### Learning</tspan>
 <tspan x="550" y="230"><tspan class="cc">. </tspan><tspan class="key"></tspan><tspan class="key">Programming</tspan>:<tspan class="cc"> ............................. </tspan><tspan x="1100" text-anchor="end" class="value">Python, TypeScript</tspan></tspan>
