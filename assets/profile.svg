@@ -48,7 +48,7 @@ text, tspan {
 <tspan x="15" y="510">                                                            </tspan>
 </text>
 <text x="550" y="30" fill="#c9d1d9">
-<tspan x="550" y="30" class="key">vinicius@lacerda</tspan>
+<tspan x="550" y="30" class="key">Vinícius Lacerda</tspan>
 <tspan x="550" y="50">--------------------------------------------------------</tspan>
 <tspan x="550" y="70" class="key">### Info</tspan>
 <tspan x="550" y="90"><tspan class="cc">. </tspan><tspan class="key"></tspan><tspan class="key">OS</tspan>:<tspan class="cc"> ............................................ </tspan><tspan x="1100" text-anchor="end" class="value">macOS, Linux</tspan></tspan>
@@ -61,12 +61,13 @@ text, tspan {
 <tspan x="550" y="230"><tspan class="cc">. </tspan><tspan class="key"></tspan><tspan class="key">Engineering</tspan>:<tspan class="cc"> .................... </tspan><tspan x="1100" text-anchor="end" class="value">Automation, Electronics, AI</tspan></tspan>
 <tspan x="550" y="250" class="cc">. </tspan>
 <tspan x="550" y="270" class="key">### Personal</tspan>
-<tspan x="550" y="290"><tspan class="cc">. </tspan><tspan class="key"></tspan><tspan class="key">Interests</tspan>:<tspan class="cc"> ............................... </tspan><tspan x="1100" text-anchor="end" class="value">Music, Engineering</tspan></tspan>
+<tspan x="550" y="290"><tspan class="cc">. </tspan><tspan class="key"></tspan><tspan class="key">Interests</tspan>:<tspan class="cc"> ............................... </tspan><tspan x="1100" text-anchor="end" class="value">Music, Engineering, Devops</tspan></tspan>
 <tspan x="550" y="310"><tspan class="cc">. </tspan><tspan class="key"></tspan><tspan class="key">Music</tspan>:<tspan class="cc"> ................................... </tspan><tspan x="1100" text-anchor="end" class="value">Rush, Tool, Milton</tspan></tspan>
 <tspan x="550" y="330"><tspan class="cc">. </tspan><tspan class="key"></tspan><tspan class="key">Hobbies</tspan>:<tspan class="cc"> ............................... </tspan><tspan x="1100" text-anchor="end" class="value">Guitar, Math, Comics</tspan></tspan>
 <tspan x="550" y="350" class="cc">. </tspan>
 <tspan x="550" y="370" class="key">### Contact</tspan>
 <tspan x="550" y="390"><tspan class="cc">. </tspan><tspan class="key"></tspan><tspan class="key">Instagram</tspan>:<tspan class="cc"> ........................................ </tspan><tspan x="1100" text-anchor="end" class="value">@vllc.hub</tspan></tspan>
-<tspan x="550" y="410"><tspan class="cc">. </tspan><tspan class="key"></tspan><tspan class="key">Website</tspan>:<tspan class="cc"> ....................................... </tspan><tspan x="1100" text-anchor="end" class="value">vivico.space</tspan></tspan>
+<tspan x="550" y="410"><tspan class="cc">. </tspan><tspan class="key"></tspan><tspan class="key">Discord</tspan>:<tspan class="cc"> ....................................... </tspan><tspan x="1100" text-anchor="end" class="value">vllc.disc</tspan></tspan>
+<tspan x="550" y="410"><tspan class="cc">. </tspan><tspan class="key"></tspan><tspan class="key">Personal email</tspan>:<tspan class="cc"> ....................................... </tspan><tspan x="1100" text-anchor="end" class="value">viniciuslacerdalc@gmail.com</tspan></tspan>
 </text>
 </svg>
