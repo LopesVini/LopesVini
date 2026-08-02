@@ -15,7 +15,7 @@ ASCII_ROWS = 25
 ASCII_CHARACTERS = "@%#*+=-:,."
 
 HIGHLIGHT_CUTOFF = 145
-PORTRAIT_ZOOM = 1.0
+PORTRAIT_ZOOM = 1.3
 
 CONTRAST = 1.35
 SHARPNESS = 1.65
@@ -81,7 +81,17 @@ def prepare_image(image_path: Path) -> Image.Image:
     original = Image.open(image_path)
     flattened = flatten_and_crop(original)
     zoomed = apply_zoom(flattened, PORTRAIT_ZOOM)
-    fitted = ImageOps.pad(zoomed, (ASCII_COLUMNS, ASCII_ROWS), method=Image.Resampling.LANCZOS, color=(255, 255, 255))
+    
+    # Calculate physical size of the ASCII grid (Consolas 16px is ~8.8px wide and 20px tall)
+    physical_width = int(ASCII_COLUMNS * 8.8)
+    physical_height = int(ASCII_ROWS * 20.0)
+    
+    # Pad the image to the physical aspect ratio to preserve true proportions
+    padded = ImageOps.pad(zoomed, (physical_width, physical_height), method=Image.Resampling.LANCZOS, color=(255, 255, 255))
+    
+    # Resize non-uniformly to the character grid, compensating for character height
+    fitted = padded.resize((ASCII_COLUMNS, ASCII_ROWS), resample=Image.Resampling.LANCZOS)
+    
     grayscale = fitted.convert("L")
     grayscale = ImageOps.autocontrast(grayscale, cutoff=1)
     grayscale = ImageEnhance.Contrast(grayscale).enhance(CONTRAST)
