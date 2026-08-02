@@ -8,14 +8,14 @@ from PIL import Image, ImageChops, ImageEnhance, ImageFilter, ImageOps
 # CONFIGURAÇÕES
 # ============================================================
 
-ASCII_COLUMNS = 43
+ASCII_COLUMNS = 60
 ASCII_ROWS = 25
 
 # Standard ASCII character scale from darkest to lightest
 ASCII_CHARACTERS = "@%#*+=-:,."
 
 HIGHLIGHT_CUTOFF = 145
-PORTRAIT_ZOOM = 1.7
+PORTRAIT_ZOOM = 1.05
 
 CONTRAST = 1.35
 SHARPNESS = 1.65
@@ -126,11 +126,15 @@ def image_to_ascii(image: Image.Image) -> list[str]:
         lines.append("".join(characters))
     return lines
 
-def format_row(label, value, key_style='key', value_style='value'):
-    total_len = len(label) + len(value)
-    dots_count = max(2, 35 - total_len)
-    dots = " " + "." * dots_count + " "
-    return f'<tspan class="cc">. </tspan><tspan class="{key_style}">{escape(label)}</tspan>:<tspan class="cc">{dots}</tspan><tspan class="{value_style}">{escape(value)}</tspan>'
+def format_row(label, value, prefix=""):
+    total_length = 45
+    used_length = len(prefix) + len(label) + 2 + len(value)
+    dots_count = max(total_length - used_length, 2)
+    dots = "." * dots_count
+    
+    left_part = f'<tspan class="cc">. </tspan><tspan class="key">{escape(prefix)}</tspan><tspan class="key">{escape(label)}</tspan>:<tspan class="cc"> {dots} </tspan>'
+    right_part = f'<tspan x="1100" text-anchor="end" class="value">{escape(value)}</tspan>'
+    return left_part + right_part
 
 def format_nested_row(prefix, label, value):
     total_len = len(prefix) + 1 + len(label) + len(value)
@@ -140,7 +144,7 @@ def format_nested_row(prefix, label, value):
 
 def create_svg(ascii_lines):
     svg_content = f"""<?xml version='1.0' encoding='UTF-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,monospace" width="1045px" height="530px" font-size="16px">
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,monospace" width="1145px" height="530px" font-size="16px">
 <style>
 @font-face {{
 src: local('Consolas'), local('Consolas Bold');
@@ -160,7 +164,7 @@ text, tspan {{
     font-size: 16px;
 }}
 </style>
-<rect width="1045px" height="530px" fill="#161b22" rx="15"/>
+<rect width="1145px" height="530px" fill="#161b22" rx="15"/>
 <text x="15" y="30" fill="#c9d1d9" class="ascii">
 """
     y = 30
@@ -169,27 +173,27 @@ text, tspan {{
         y += 20
 
     svg_content += f"""</text>
-<text x="450" y="30" fill="#c9d1d9">
-<tspan x="450" y="30" class="key">vinicius@lacerda</tspan>
-<tspan x="450" y="50">----------------------------------------------------</tspan>
-<tspan x="450" y="70" class="key">### Info</tspan>
-<tspan x="450" y="90">{format_row('OS', 'macOS, Linux')}</tspan>
-<tspan x="450" y="110">{format_row('Location', 'Belo Horizonte, Brazil')}</tspan>
-<tspan x="450" y="130">{format_row('University', 'Electrical Engineering, UFMG')}</tspan>
-<tspan x="450" y="150" class="cc">. </tspan>
-<tspan x="450" y="170" class="key">### Learning</tspan>
-<tspan x="450" y="190">{format_row('Programming', 'Python, TypeScript')}</tspan>
-<tspan x="450" y="210">{format_row('Systems', 'Linux, Networks, Git')}</tspan>
-<tspan x="450" y="230">{format_row('Engineering', 'Automation, Electronics, AI')}</tspan>
-<tspan x="450" y="250" class="cc">. </tspan>
-<tspan x="450" y="270" class="key">### Personal</tspan>
-<tspan x="450" y="290">{format_row('Interests', 'Music, Engineering')}</tspan>
-<tspan x="450" y="310">{format_row('Music', 'Rush, Tool, Milton')}</tspan>
-<tspan x="450" y="330">{format_row('Hobbies', 'Guitar, Math, Comics')}</tspan>
-<tspan x="450" y="350" class="cc">. </tspan>
-<tspan x="450" y="370" class="key">### Contact</tspan>
-<tspan x="450" y="390">{format_row('Instagram', '@vllc.hub')}</tspan>
-<tspan x="450" y="410">{format_row('Website', 'vivico.space')}</tspan>
+<text x="550" y="30" fill="#c9d1d9">
+<tspan x="550" y="30" class="key">vinicius@lacerda</tspan>
+<tspan x="550" y="50">--------------------------------------------------------</tspan>
+<tspan x="550" y="70" class="key">### Info</tspan>
+<tspan x="550" y="90">{format_row('OS', 'macOS, Linux')}</tspan>
+<tspan x="550" y="110">{format_row('Location', 'Belo Horizonte, Brazil')}</tspan>
+<tspan x="550" y="130">{format_row('University', 'Electrical Engineering, UFMG')}</tspan>
+<tspan x="550" y="150" class="cc">. </tspan>
+<tspan x="550" y="170" class="key">### Learning</tspan>
+<tspan x="550" y="190">{format_row('Programming', 'Python, TypeScript')}</tspan>
+<tspan x="550" y="210">{format_row('Systems', 'Linux, Networks, Git')}</tspan>
+<tspan x="550" y="230">{format_row('Engineering', 'Automation, Electronics, AI')}</tspan>
+<tspan x="550" y="250" class="cc">. </tspan>
+<tspan x="550" y="270" class="key">### Personal</tspan>
+<tspan x="550" y="290">{format_row('Interests', 'Music, Engineering')}</tspan>
+<tspan x="550" y="310">{format_row('Music', 'Rush, Tool, Milton')}</tspan>
+<tspan x="550" y="330">{format_row('Hobbies', 'Guitar, Math, Comics')}</tspan>
+<tspan x="550" y="350" class="cc">. </tspan>
+<tspan x="550" y="370" class="key">### Contact</tspan>
+<tspan x="550" y="390">{format_row('Instagram', '@vllc.hub')}</tspan>
+<tspan x="550" y="410">{format_row('Website', 'vivico.space')}</tspan>
 </text>
 </svg>
 """
