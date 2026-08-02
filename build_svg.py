@@ -127,7 +127,7 @@ def image_to_ascii(image: Image.Image) -> list[str]:
     return lines
 
 def format_row(label, value, prefix=""):
-    total_length = 45
+    total_length = 60
     used_length = len(prefix) + len(label) + 2 + len(value)
     dots_count = max(total_length - used_length, 2)
     dots = "." * dots_count
