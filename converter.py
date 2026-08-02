@@ -651,7 +651,7 @@ def create_svg(
         x="650"
         y="54"
         class="title"
-    >vinicius@vivico</text>
+    >Vinicius Lacerda</text>
 
     <line
         x1="885"
@@ -661,10 +661,9 @@ def create_svg(
         class="header-line"
     />
 
-    {create_row(106, "OS", "macOS · Linux Mint")}
-    {create_row(145, "Host", "MacBook Air M4")}
+    {create_row(106, "OS", "macOS · Linux")}
+    {create_row(145, "Location", "Belo Horizonte, Brazil")}
     {create_row(184, "University", "Electrical Engineering · UFMG")}
-    {create_row(223, "Editor", "VS Code · Obsidian")}
 
     {create_section(285, "Learning", 850)}
 
@@ -672,20 +671,17 @@ def create_svg(
     {create_row(370, "Systems", "Linux · Networks · Git")}
     {create_row(410, "Engineering", "Automation · Electronics · AI")}
 
-    {create_section(475, "Projects", 840)}
+    {create_section(475, "Personal", 840)}
 
-    {create_row(520, "Website", "vivico.space")}
-    {create_row(560, "Company", "VEBRAM")}
-    {create_row(600, "Study Engine", "Engineering Codex")}
+    {create_row(560, "Interests", "Music · Engineering")}
+    {create_row(520, "Music", "Rush · Tool · Milton")}
+    {create_row(600, "Hobbies", "Guitar · Math · Comics")}
 
     {create_section(665, "Contact", 825)}
 
-    {create_row(710, "GitHub", "github.com/LopesVini")}
+    {create_row(710, "Instagram", "@vllc.hub")}
     {create_row(750, "Website", "vivico.space")}
 
-    {create_section(815, "Interests", 850)}
-
-    {create_row(860, "Focus", "Homelab · Music · Engineering")}
 </svg>
 """
 
