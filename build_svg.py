@@ -12,11 +12,10 @@ ASCII_COLUMNS = 43
 ASCII_ROWS = 25
 
 # Standard ASCII character scale from darkest to lightest
-# Reversing it since the terminal background is dark
-ASCII_CHARACTERS = " .'`^\",:;Il!i><~+_-?][}{1)(|\\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$"
+ASCII_CHARACTERS = "@%#*+=-:,."
 
-HIGHLIGHT_CUTOFF = 240
-PORTRAIT_ZOOM = 1.25
+HIGHLIGHT_CUTOFF = 145
+PORTRAIT_ZOOM = 1.20
 
 CONTRAST = 1.35
 SHARPNESS = 1.65
@@ -131,7 +130,7 @@ def format_nested_row(prefix, label, value):
 
 def create_svg(ascii_lines):
     svg_content = f"""<?xml version='1.0' encoding='UTF-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,monospace" width="985px" height="530px" font-size="16px">
+<svg xmlns="http://www.w3.org/2000/svg" font-family="ConsolasFallback,Consolas,monospace" width="1045px" height="530px" font-size="16px">
 <style>
 @font-face {{
 src: local('Consolas'), local('Consolas Bold');
@@ -145,9 +144,13 @@ size-adjust: 109%;
 .addColor {{fill: #3fb950;}}
 .delColor {{fill: #f85149;}}
 .cc {{fill: #616e7f;}}
-text, tspan {{white-space: pre;}}
+text, tspan {{
+    white-space: pre;
+    font-family: ConsolasFallback, Consolas, monospace;
+    font-size: 16px;
+}}
 </style>
-<rect width="985px" height="530px" fill="#161b22" rx="15"/>
+<rect width="1045px" height="530px" fill="#161b22" rx="15"/>
 <text x="15" y="30" fill="#c9d1d9" class="ascii">
 """
     y = 30
@@ -156,24 +159,24 @@ text, tspan {{white-space: pre;}}
         y += 20
 
     svg_content += f"""</text>
-<text x="390" y="30" fill="#c9d1d9">
-<tspan x="390" y="30">vinicius@lacerda</tspan> -———————————————————————————————————————————-—-
-<tspan x="390" y="50">{format_row('OS', 'macOS, Linux')}</tspan>
-<tspan x="390" y="70">{format_row('Location', 'Belo Horizonte, Brazil')}</tspan>
-<tspan x="390" y="90">{format_row('University', 'Electrical Engineering, UFMG')}</tspan>
-<tspan x="390" y="110" class="cc">. </tspan>
-<tspan x="390" y="130">{format_nested_row('Learning', 'Programming', 'Python, TypeScript')}</tspan>
-<tspan x="390" y="150">{format_nested_row('Learning', 'Systems', 'Linux, Networks, Git')}</tspan>
-<tspan x="390" y="170">{format_nested_row('Learning', 'Engineering', 'Automation, Electronics, AI')}</tspan>
-<tspan x="390" y="190" class="cc">. </tspan>
-<tspan x="390" y="210">{format_nested_row('Personal', 'Interests', 'Music, Engineering')}</tspan>
-<tspan x="390" y="230">{format_nested_row('Personal', 'Music', 'Rush, Tool, Milton')}</tspan>
-<tspan x="390" y="250">{format_nested_row('Personal', 'Hobbies', 'Guitar, Math, Comics')}</tspan>
-<tspan x="390" y="270" class="cc">. </tspan>
-<tspan x="390" y="290">- Contact -——————————————————————————————————————————————-—-</tspan>
-<tspan x="390" y="310">{format_row('Instagram', '@vllc.hub')}</tspan>
-<tspan x="390" y="330">{format_row('Website', 'vivico.space')}</tspan>
-<tspan x="390" y="350" class="cc">. </tspan>
+<text x="450" y="30" fill="#c9d1d9">
+<tspan x="450" y="30">vinicius@lacerda</tspan> -———————————————————————————————————————————-—-
+<tspan x="450" y="50">{format_row('OS', 'macOS, Linux')}</tspan>
+<tspan x="450" y="70">{format_row('Location', 'Belo Horizonte, Brazil')}</tspan>
+<tspan x="450" y="90">{format_row('University', 'Electrical Engineering, UFMG')}</tspan>
+<tspan x="450" y="110" class="cc">. </tspan>
+<tspan x="450" y="130">{format_nested_row('Learning', 'Programming', 'Python, TypeScript')}</tspan>
+<tspan x="450" y="150">{format_nested_row('Learning', 'Systems', 'Linux, Networks, Git')}</tspan>
+<tspan x="450" y="170">{format_nested_row('Learning', 'Engineering', 'Automation, Electronics, AI')}</tspan>
+<tspan x="450" y="190" class="cc">. </tspan>
+<tspan x="450" y="210">{format_nested_row('Personal', 'Interests', 'Music, Engineering')}</tspan>
+<tspan x="450" y="230">{format_nested_row('Personal', 'Music', 'Rush, Tool, Milton')}</tspan>
+<tspan x="450" y="250">{format_nested_row('Personal', 'Hobbies', 'Guitar, Math, Comics')}</tspan>
+<tspan x="450" y="270" class="cc">. </tspan>
+<tspan x="450" y="290">- Contact -——————————————————————————————————————————————-—-</tspan>
+<tspan x="450" y="310">{format_row('Instagram', '@vllc.hub')}</tspan>
+<tspan x="450" y="330">{format_row('Website', 'vivico.space')}</tspan>
+<tspan x="450" y="350" class="cc">. </tspan>
 </text>
 </svg>
 """
