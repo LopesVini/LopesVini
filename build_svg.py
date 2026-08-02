@@ -15,7 +15,7 @@ ASCII_ROWS = 25
 ASCII_CHARACTERS = "@%#*+=-:,."
 
 HIGHLIGHT_CUTOFF = 145
-PORTRAIT_ZOOM = 1.3
+PORTRAIT_ZOOM = 1.7
 
 CONTRAST = 1.35
 SHARPNESS = 1.65
@@ -170,23 +170,26 @@ text, tspan {{
 
     svg_content += f"""</text>
 <text x="450" y="30" fill="#c9d1d9">
-<tspan x="450" y="30">vinicius@lacerda</tspan> -———————————————————————————————————————————-—-
-<tspan x="450" y="50">{format_row('OS', 'macOS, Linux')}</tspan>
-<tspan x="450" y="70">{format_row('Location', 'Belo Horizonte, Brazil')}</tspan>
-<tspan x="450" y="90">{format_row('University', 'Electrical Engineering, UFMG')}</tspan>
-<tspan x="450" y="110" class="cc">. </tspan>
-<tspan x="450" y="130">{format_nested_row('Learning', 'Programming', 'Python, TypeScript')}</tspan>
-<tspan x="450" y="150">{format_nested_row('Learning', 'Systems', 'Linux, Networks, Git')}</tspan>
-<tspan x="450" y="170">{format_nested_row('Learning', 'Engineering', 'Automation, Electronics, AI')}</tspan>
-<tspan x="450" y="190" class="cc">. </tspan>
-<tspan x="450" y="210">{format_nested_row('Personal', 'Interests', 'Music, Engineering')}</tspan>
-<tspan x="450" y="230">{format_nested_row('Personal', 'Music', 'Rush, Tool, Milton')}</tspan>
-<tspan x="450" y="250">{format_nested_row('Personal', 'Hobbies', 'Guitar, Math, Comics')}</tspan>
-<tspan x="450" y="270" class="cc">. </tspan>
-<tspan x="450" y="290">- Contact -——————————————————————————————————————————————-—-</tspan>
-<tspan x="450" y="310">{format_row('Instagram', '@vllc.hub')}</tspan>
-<tspan x="450" y="330">{format_row('Website', 'vivico.space')}</tspan>
+<tspan x="450" y="30" class="key">vinicius@lacerda</tspan>
+<tspan x="450" y="50">----------------------------------------------------</tspan>
+<tspan x="450" y="70" class="key">### Info</tspan>
+<tspan x="450" y="90">{format_row('OS', 'macOS, Linux')}</tspan>
+<tspan x="450" y="110">{format_row('Location', 'Belo Horizonte, Brazil')}</tspan>
+<tspan x="450" y="130">{format_row('University', 'Electrical Engineering, UFMG')}</tspan>
+<tspan x="450" y="150" class="cc">. </tspan>
+<tspan x="450" y="170" class="key">### Learning</tspan>
+<tspan x="450" y="190">{format_row('Programming', 'Python, TypeScript')}</tspan>
+<tspan x="450" y="210">{format_row('Systems', 'Linux, Networks, Git')}</tspan>
+<tspan x="450" y="230">{format_row('Engineering', 'Automation, Electronics, AI')}</tspan>
+<tspan x="450" y="250" class="cc">. </tspan>
+<tspan x="450" y="270" class="key">### Personal</tspan>
+<tspan x="450" y="290">{format_row('Interests', 'Music, Engineering')}</tspan>
+<tspan x="450" y="310">{format_row('Music', 'Rush, Tool, Milton')}</tspan>
+<tspan x="450" y="330">{format_row('Hobbies', 'Guitar, Math, Comics')}</tspan>
 <tspan x="450" y="350" class="cc">. </tspan>
+<tspan x="450" y="370" class="key">### Contact</tspan>
+<tspan x="450" y="390">{format_row('Instagram', '@vllc.hub')}</tspan>
+<tspan x="450" y="410">{format_row('Website', 'vivico.space')}</tspan>
 </text>
 </svg>
 """
